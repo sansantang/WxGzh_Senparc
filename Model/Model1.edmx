@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="weixin_gzhModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="weixin_userinfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="subscribe" Type="int" />
+          <Property Name="openid" Type="varchar" MaxLength="255" />
+          <Property Name="nickname" Type="varchar" MaxLength="30" />
+          <Property Name="sex" Type="int" />
+          <Property Name="city" Type="varchar" MaxLength="20" />
+          <Property Name="country" Type="varchar" MaxLength="20" />
+          <Property Name="province" Type="varchar" MaxLength="20" />
+          <Property Name="language" Type="varchar" MaxLength="30" />
+          <Property Name="headimgurl" Type="varchar" MaxLength="255" />
+          <Property Name="subscribe_time" Type="datetime" Precision="0" />
+          <Property Name="unionid" Type="varchar" MaxLength="255" />
+          <Property Name="remark" Type="varchar" MaxLength="100" />
+          <Property Name="groupid" Type="int" />
+          <Property Name="tagid_list" Type="varchar" MaxLength="255" />
+          <Property Name="subscribe_scene" Type="varchar" MaxLength="255" />
+          <Property Name="qr_scene" Type="int" />
+          <Property Name="qr_scene_str" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="weixin_gzhModelStoreContainer">
+          <EntitySet Name="weixin_userinfo" EntityType="Self.weixin_userinfo" Schema="weixin_gzh" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="weixin_gzhModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="weixin_userinfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subscribe" Type="Int32" />
+          <Property Name="openid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="nickname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="sex" Type="Int32" />
+          <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="country" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="province" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="language" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="headimgurl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="subscribe_time" Type="DateTime" />
+          <Property Name="unionid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="remark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="groupid" Type="Int32" />
+          <Property Name="tagid_list" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="subscribe_scene" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="qr_scene" Type="Int32" />
+          <Property Name="qr_scene_str" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="weixin_gzhEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="weixin_userinfo" EntityType="Self.weixin_userinfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="weixin_gzhModelStoreContainer" CdmEntityContainer="weixin_gzhEntities">
+          <EntitySetMapping Name="weixin_userinfo">
+            <EntityTypeMapping TypeName="weixin_gzhModel.weixin_userinfo">
+              <MappingFragment StoreEntitySet="weixin_userinfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="subscribe" ColumnName="subscribe" />
+                <ScalarProperty Name="openid" ColumnName="openid" />
+                <ScalarProperty Name="nickname" ColumnName="nickname" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="province" ColumnName="province" />
+                <ScalarProperty Name="language" ColumnName="language" />
+                <ScalarProperty Name="headimgurl" ColumnName="headimgurl" />
+                <ScalarProperty Name="subscribe_time" ColumnName="subscribe_time" />
+                <ScalarProperty Name="unionid" ColumnName="unionid" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="groupid" ColumnName="groupid" />
+                <ScalarProperty Name="tagid_list" ColumnName="tagid_list" />
+                <ScalarProperty Name="subscribe_scene" ColumnName="subscribe_scene" />
+                <ScalarProperty Name="qr_scene" ColumnName="qr_scene" />
+                <ScalarProperty Name="qr_scene_str" ColumnName="qr_scene_str" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

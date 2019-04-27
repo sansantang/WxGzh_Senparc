@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="weixin_gzhModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="weixin_userinfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subscribe" Type="int" />
+    <Property Name="openid" Type="varchar" MaxLength="255" />
+    <Property Name="nickname" Type="varchar" MaxLength="30" />
+    <Property Name="sex" Type="int" />
+    <Property Name="city" Type="varchar" MaxLength="20" />
+    <Property Name="country" Type="varchar" MaxLength="20" />
+    <Property Name="province" Type="varchar" MaxLength="20" />
+    <Property Name="language" Type="varchar" MaxLength="30" />
+    <Property Name="headimgurl" Type="varchar" MaxLength="255" />
+    <Property Name="subscribe_time" Type="datetime" Precision="0" />
+    <Property Name="unionid" Type="varchar" MaxLength="255" />
+    <Property Name="remark" Type="varchar" MaxLength="100" />
+    <Property Name="groupid" Type="int" />
+    <Property Name="tagid_list" Type="varchar" MaxLength="255" />
+    <Property Name="subscribe_scene" Type="varchar" MaxLength="255" />
+    <Property Name="qr_scene" Type="int" />
+    <Property Name="qr_scene_str" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="weixin_gzhModelStoreContainer">
+    <EntitySet Name="weixin_userinfo" EntityType="Self.weixin_userinfo" Schema="weixin_gzh" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

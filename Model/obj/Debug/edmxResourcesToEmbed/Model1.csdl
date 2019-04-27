@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="weixin_gzhModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="weixin_userinfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="subscribe" Type="Int32" />
+    <Property Name="openid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="nickname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sex" Type="Int32" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="province" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="language" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="headimgurl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="subscribe_time" Type="DateTime" />
+    <Property Name="unionid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="remark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="groupid" Type="Int32" />
+    <Property Name="tagid_list" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="subscribe_scene" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="qr_scene" Type="Int32" />
+    <Property Name="qr_scene_str" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="weixin_gzhEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="weixin_userinfo" EntityType="Self.weixin_userinfo" />
+  </EntityContainer>
+</Schema>

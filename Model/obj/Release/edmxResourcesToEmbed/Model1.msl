@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="weixin_gzhModelStoreContainer" CdmEntityContainer="weixin_gzhEntities">
+    <EntitySetMapping Name="weixin_userinfo">
+      <EntityTypeMapping TypeName="weixin_gzhModel.weixin_userinfo">
+        <MappingFragment StoreEntitySet="weixin_userinfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="subscribe" ColumnName="subscribe" />
+          <ScalarProperty Name="openid" ColumnName="openid" />
+          <ScalarProperty Name="nickname" ColumnName="nickname" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="headimgurl" ColumnName="headimgurl" />
+          <ScalarProperty Name="subscribe_time" ColumnName="subscribe_time" />
+          <ScalarProperty Name="unionid" ColumnName="unionid" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="groupid" ColumnName="groupid" />
+          <ScalarProperty Name="tagid_list" ColumnName="tagid_list" />
+          <ScalarProperty Name="subscribe_scene" ColumnName="subscribe_scene" />
+          <ScalarProperty Name="qr_scene" ColumnName="qr_scene" />
+          <ScalarProperty Name="qr_scene_str" ColumnName="qr_scene_str" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
